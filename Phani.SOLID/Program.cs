@@ -1,4 +1,5 @@
 ﻿using System;
+using Phani.SOLID.LiskovSubstitutePrinciple;
 
 namespace Phani.SOLID
 {
@@ -6,7 +7,16 @@ namespace Phani.SOLID
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Before LSP
+            CompanyCEO companyLevel = new CompanySecretary();
+            Console.WriteLine(companyLevel.GetSalary());
+
+            //After LSP
+            Company company = new CompanyHR();
+            Console.WriteLine(company.GetSalary());
+
+            company = new CompanyExecutive();
+            Console.WriteLine(company.GetSalary());
         }
     }
 }
