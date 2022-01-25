@@ -1,10 +1,10 @@
 ﻿namespace Phani.SOLID.DependencyInversionPrinciple
 {
-    public class DIPProductService
+    public class DIPVProductService
     {
         private readonly DIPVProductRepository _productRepository;
 
-        public DIPProductService()
+        public DIPVProductService()
         {
             _productRepository = new DIPVProductRepository();
         }
